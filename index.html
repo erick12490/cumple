@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliz Cumpleaños, Amor 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: fuchsia;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      color: white;
+    }
+
+    .container {
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      animation: aparecer 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.4em;
+      animation: aparecer 3s ease-in-out;
+    }
+
+    .heart {
+      font-size: 4em;
+      animation: latido 1s infinite;
+      color: #e60073;
+    }
+
+    .mensaje {
+      background-color: black;
+      padding: 20px;
+      border-radius: 20px;
+      display: inline-block;
+      animation: latido-borde 1.8s infinite ease-in-out;
+    }
+
+    .firma {
+      margin-top: 30px;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+
+    button {
+      background-color: #fff;
+      color: #e60073;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ffe6f0;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes latido {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    @keyframes latido-borde {
+      0%, 100% {
+        box-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff;
+      }
+      50% {
+        box-shadow: 0 0 25px #ff66ff, 0 0 35px #ff66ff;
+      }
+    }
+
+    .pixel-heart {
+      display: none;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(21, 20px);
+      gap: 2px;
+      justify-content: center;
+    }
+
+    .cell {
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+    }
+
+    .red {
+      background-color: #ff003c;
+      box-shadow: 0 0 5px #ff003c;
+    }
+
+    .white {
+      background-color: white;
+    }
+
+    @media (max-height: 700px) {
+      .container {
+        padding-bottom: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="audio-boton" style="position: absolute; top: 20px; right: 20px;">
+    <button onclick="document.getElementById('miAudio').play()">▶️ Reproducir Música</button>
+  </div>
+  <div class="container">
+    <div class="mensaje">
+      <h1>🎉 ¡Feliz cumpleaños, Mi Solecito! 🎂</h1>
+      <p>Hoy celebro el día más hermoso porque naciste tú ❤️</p>
+      <p>Gracias por llegar a mi vida, por hacer de las salidas especiales y de esas noches donde los abrazos eran nuestro abrigo.</p>
+      <div class="heart">💖</div>
+
+      <button onclick="mostrarSorpresa()">Haz clic para tu sorpresa 💌</button>
+      <div id="sorpresa" style="display:none;">GRACIAS POR TANTO, Y... 🎈<br>
+      Este que esta aqui no te quiere dejar,<br>
+      este que esta aqui tambien se deja llevar,<br>
+      estamos destinados juntos celebrar la navidad.<br>
+      Esto nunca tuvo sentido, fuimos en contra de la ley universal.💘</div>
+
+      <button onclick="mostrarTulipanes()">Ver algo especial 🌷</button>
+      <div id="tulipanes" style="display:none; background-color: black; color: white; text-align: center;">
+        <h2 style="color: hotpink;">🌷 Para ti, que te quiero demasiado🌷</h2>
+        <p style="font-size: 1.2em;">Esta imagen es solo una pequeña parte de todo lo q vivimos juntos.</p>
+        <img src="foto_mi_solecito.jpeg" alt="Foto para ti" class="flor" style="max-width: 200px; width: 100%; border-radius: 10px; box-shadow: 0 0 20px hotpink; margin-top: 20px;">
+      </div>
+
+      <button onclick="mostrarCorazon()">Ver corazón con sorpresa ❤️</button>
+      <div id="corazon" class="pixel-heart"></div>
+      <p id="texto-corazon" style="display:none; margin-top: 20px; font-size: 1.3em; color: hotpink;">QUEDATE SIEMPRE 💖</p>
+
+      <button onclick="mostrarDedicatoria()">Ver dedicatoria especial ✨</button>
+      <p id="dedicatoria" style="display:none; margin-top: 20px; font-size: 1.1em; color: white; max-width: 90%; margin-left: auto; margin-right: auto;">
+        Bueno mi solecito hermoso, ante todo hoy es un día muy especial y no sólo porque es tu cumpleaños, aunque sí, también. Más que todo es porque estoy contigo en esta fecha tan especial para ti.  <br><br>
+        Y bueno, quizá este detalle sea poco, pero mis palabras son sinceras para ti. Sabes que te quiero y mucho. En serio no te imaginas lo feliz que me haces.  <br><br>
+        Eres la niña más bonita , mi amor bonito . Y ten en cuenta que nadie cambiará eso. Sí, mi amor: ¡FELIZ CUMPLEAÑOS!  <br><br>
+        Ten en cuenta que siempre estaré para ti. Quiero estar contigo en los momentos malos y buenos, cuando despiertes y verte ahí, toda bonita.  <br><br>
+        Me hace feliz tenerte. tus ojitos bellos al sonrerir te juro q es lo mas hermoso que puede existir. Quizá sea muy cursi, pero en verdad me inspiras a escribir todo esto.  <br><br>
+        Y bueno, mi vida... ¡feliz cumpleaños!  <strong>SOY TODO TUYOOO!!</strong> 💞
+      </p>
+
+      <p class="firma"><br>Tu cómplice, tu amore 💌</p>
+    </div>
+  </div>
+
+  <audio id="miAudio" loop>
+    <source src="musica.mp3" type="audio/mp3">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <script>
+    function mostrarSorpresa() {
+      document.getElementById('sorpresa').style.display = 'block';
+    }
+
+    function mostrarTulipanes() {
+      document.getElementById('tulipanes').style.display = 'block';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function mostrarDedicatoria() {
+      const texto = document.getElementById('dedicatoria');
+      texto.style.display = 'block';
+      setTimeout(() => {
+        texto.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 200);
+    }
+
+    const corazon = document.getElementById('corazon');
+    const heartMap = [
+      "0000110000011000000",
+      "0001111000111100000",
+      "0011111101111110000",
+      "0111111111111111000",
+      "0111111111111111000",
+      "0111111111111111000",
+      "0011111111111110000",
+      "0001111111111100000",
+      "0000111111111000000",
+      "0000011111110000000",
+      "0000001111100000000",
+      "0000000111000000000",
+      "0000000010000000000"
+    ];
+
+    const letraE1 = [ [3,4],[3,5],[3,6],[4,4],[5,4],[5,5],[6,4],[7,4],[7,5],[7,6] ];
+    const letraE2 = letraE1.map(([r, c]) => [r, c + 8]);
+
+    function mostrarCorazon() {
+      corazon.innerHTML = '';
+      corazon.style.display = 'grid';
+      document.getElementById('texto-corazon').style.display = 'block';
+
+      const rows = 13, cols = 21;
+
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          const cell = document.createElement('div');
+          cell.classList.add('cell');
+          if (heartMap[r][c] === "1") {
+            cell.classList.add('red');
+          }
+          if (letraE1.concat(letraE2).some(([lr, lc]) => lr === r && lc === c)) {
+            cell.classList.remove('red');
+            cell.classList.add('white');
+          }
+          corazon.appendChild(cell);
+        }
+      }
+
+      setTimeout(() => {
+        document.getElementById('texto-corazon').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+  </script>
+</body>
+</html>
